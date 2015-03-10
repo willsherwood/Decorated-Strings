@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class String implements OrderedCollection<Character> {
+public final class String implements OrderedCollection<Character> {
     
-    private char[] value;
+    private final char[] value;
     
-    public String(char[] value) {
+    public String(final char[] value) {
         this.value = Arrays.copyOf(value, value.length);
     }
     
