@@ -15,13 +15,6 @@ public interface OrderedCollection<K> {
 
     int size ();
     
-    default K[] value () {
-        K[] k = (K[]) new Object[size()];
-        for (int i=0; i<size(); i++)
-            k[i] = at(i);
-        return k;
-    }
-
     /**
      * @return whether or not K is in this collection
      */
