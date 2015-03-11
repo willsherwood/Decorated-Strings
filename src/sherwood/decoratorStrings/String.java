@@ -42,7 +42,7 @@ public final class String implements OrderedCollection<Character> {
         if (p.size() != size())
             return false;
         for (int i=0; i<size(); i++)
-            if (!(p.at(i) instanceof Character) || p.at(i) != at(i))
+            if (!(p.at(i) instanceof Character) || !p.at(i).equals(at(i)))
                 return false;
         return true;
     }
