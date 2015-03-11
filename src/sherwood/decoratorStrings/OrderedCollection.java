@@ -19,10 +19,7 @@ public interface OrderedCollection<K> {
      * @return whether or not K is in this collection
      */
     default boolean in(K k) {
-        for (int i=0; i<size(); i++)
-            if (at(i).equals(k))
-                return true;
-        return false;
+        return search(k).isPresent();
     }
 
     /**
